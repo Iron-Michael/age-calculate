@@ -2,10 +2,17 @@
 
 
 
-.main-bg{
+/* จัดการขอบและพื้นหลังของ body เพื่อให้เต็มจอ */
+body {
+  margin: 0; 
+  padding: 0;
   background-color: hsl(0, 0%, 94%);
-  width: 375px;
-  min-height: 100vh;
+}
+
+/* พื้นหลังหลัก */
+.main-bg {
+  width: 375px;            
+  min-height: 100vh;       
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,12 +22,18 @@
   font-style: normal;
 }
 
+
 .main-calculator{
   background-color: hsl(0, 0%, 100%);
   width: 90%;
   min-height: 400px;
   border-top-left-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-right-radius: 20%;
 }
+
 
 .label-header{
   width: 90%;
@@ -34,6 +47,7 @@
   justify-content: space-between;
 }
 
+
 .main-header{
   width: 90%;
   display: flex;
@@ -45,6 +59,104 @@
   justify-content: space-between;
   margin-bottom: 10%;
 }
+
+
+.separator{
+  width: 90%;
+  height: 1px;
+  background-color: hsl(0, 1%, 44%);
+  position: relative;
+}
+
+.circle-navigator {
+  background-color: hsl(259, 100%, 65%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 120px;
+  top: -25px;
+  display: flex;
+  justify-content: center;   
+  align-items: center;      
+  cursor: pointer;           
+}
+
+
+.result-age-main{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  min-height: 250px;
+  font-size: 50px;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+}
+
+.result-age-main label {
+  color: hsl(259, 100%, 65%);
+}
+
+
+@media (min-width: 1000px) {
+  .main-bg {
+    width: 100%;    
+    margin: 0 auto;          
+  }
+
+
+  .main-calculator{
+    background-color: hsl(0, 0%, 100%);
+    width: 50%;
+    min-height: 400px;
+    border-top-left-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+  .label-header{
+    width: 60%;
+    margin-left: 10%;
+  }
+  
+  .main-header{
+    width: 60%;
+  }
+
+  .circle-navigator{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    left: 90%;
+    top: -25px;
+  }
+
+  .result-age-main{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+    justify-items: center;
+    align-content: flex-start;
+    min-height: 250px;
+    font-size: 4rem;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    margin-left: 10%;
+
+  }
+
+}
+
+
+
 
 .main-header-error{
   width: 90%;
@@ -125,28 +237,17 @@
 }
 
 
-.separator{
-  width: 90%;
-  height: 5px;
-  background-color: black;
-  position: relative;
+
+
+.img-arrow {
+  width: 50%;    
+  height: auto;  
 }
 
-.circle-navigator{
-  background-color: hsl(259, 100%, 65%);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  position: absolute;
-  left: 120px;
-  top: -25px;
-  display: flex;
-  justify-content: center;
-}
 
-.img-arrow{
-  width: 50%;
-}
+
+
+
 /* 
 .poppins-thin {
   font-family: "Poppins", serif;
