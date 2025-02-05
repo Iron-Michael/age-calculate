@@ -112,7 +112,7 @@ const Calculator = () => {
           <input
             className={yearValueError ? 'input-box-error' : 'input-box'}
             value={yearValue}
-            placeholder='YY'
+            placeholder='YYYY'
             onChange={(e) => setYear(e.target.value)}
             type='number'
             onBlur={() => {

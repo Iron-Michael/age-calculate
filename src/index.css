@@ -120,6 +120,9 @@ body {
   font-weight: 700;
   margin-top: 10%;
   margin-left: 5%;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .result-age-main label {
@@ -256,7 +259,7 @@ body {
   height: 50px;
   border-radius: 5px;
   border: 1px solid hsl(0, 1%, 44%); 
-  font-size: 18px;
+  font-size: 23px;
   font-weight: 700;
   justify-content: center;
   text-align: center;
