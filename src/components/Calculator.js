@@ -82,27 +82,63 @@ const Calculator = () => {
           <input
             className={dayValueError ? 'input-box-error' : 'input-box'}
             value={dayValue}
+            placeholder='DD'
             onChange={(e) => setDay(e.target.value)}
             type='number'
+            onBlur={()=>{
+              if (dayValue=== ''){
+              setDayValueError(false)
+              }
+            }}
           />
         </div>
+
         <div className='the-box'>
           <input
             className={monthValueError ? 'input-box-error' : 'input-box'}
             value={monthValue}
+            placeholder='MM'
             onChange={(e) => setMonth(e.target.value)}
             type='number'
+            onBlur={() => {
+              if (monthValue === '') {
+                setMonthValueError(false)
+              }
+            }}
           />
         </div>
+
         <div className='the-box'>
           <input
             className={yearValueError ? 'input-box-error' : 'input-box'}
             value={yearValue}
+            placeholder='YY'
             onChange={(e) => setYear(e.target.value)}
             type='number'
+            onBlur={() => {
+              if (yearValue === '') {
+                setYearValueError(false)
+              }
+            }}
           />
         </div>
       </header>
+
+      <div className='error-section'>
+        <div className='the-box-error'>
+          {dayValueError && <span className='error-message'>Invalid day</span>}
+        </div>
+
+        <div className='the-box-error'>
+
+          {monthValueError && <span className='error-message'>Invalid month</span>}
+        </div>
+
+        <div className='the-box-error'>
+          {yearValueError && <span className='error-message'>Invalid year</span>}
+        </div>
+      </div>
+
 
       <center style={{ width: '100%', position: 'relative' }}>
         <div className='separator'>
@@ -115,9 +151,9 @@ const Calculator = () => {
       </center>
 
       <div className='result-age-main'>
-        <div><label>{age.years} </label>years</div>
-        <div><label>{age.months}</label> months</div>
-        <div><label>{age.days}</label> days</div>
+        <div className='line-result'><label>{age.years} </label>years</div>
+        <div className='line-result'><label>{age.months}</label> months</div>
+        <div className='line-result'><label>{age.days}</label> days</div>
       </div>
     </section>
   );
