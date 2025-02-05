@@ -102,7 +102,13 @@ body {
   justify-content: center;   
   align-items: center;      
   cursor: pointer;   
-  border-color:hsl(259, 100%, 65%); ;      
+  border-color:hsl(259, 100%, 65%);
+  
+}
+
+.circle-navigator:hover {
+  background-color: black;   /* เปลี่ยนสีพื้นหลังเป็นสีดำเมื่อ hover */
+  border-color: black;       /* เปลี่ยนขอบเป็นสีดำด้วย */
 }
 
 
